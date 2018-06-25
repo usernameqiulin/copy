@@ -1,0 +1,25 @@
+{
+  "name": "untitled",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "pack": "bone build",
+    "start": "bone start"
+  },
+  "dependencies": {
+    "@bone/bone-mobile": "^2.0.0",
+    "@bone/bone-mobile-ui": "^2.0.0",
+    "@bone/intl-helper": "^0.1.8",
+    "@bone/living-sdk": "^0.1.9",
+    "react-native": "0.41.2"
+  },
+  "bnpm": {
+    "mode": "yarn"
+  },
+  "devDependencies": {
+    "copy-dir": "^0.3.0",
+    "rimraf": "^2.6.2"
+  }
+}

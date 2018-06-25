@@ -1,0 +1,39 @@
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { NavBar } from '@bone/bone-mobile-ui';
+import style from '../public/style';
+import Edit from '../view/EditView';
+// import Edit from '../view/ScrollView';
+
+const styles = style;
+const generateBackIcon = ()=>{ return (<View style={styles.buttonIconStyle} />) }
+export default class EditPage extends Bone.Page {
+        constructor(...args) {
+          super(...args);
+          this.onBackButtonPress = this.onBackButtonPress.bind(this);
+  }
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+         <NavBar
+            title="编辑预约"
+            left={style}
+            onLeftPress={this.onBackButtonPress}
+          />
+        <Edit navigation={Bone.navigation} style={{ flex: 1 }}/>
+      </View>
+    );
+  }
+        onBackButtonPress() {
+          // console.log('onBackButtonPress');
+          Bone.navigation.pop();
+          console.log("已经退出编辑页面----并且触发了退出编辑页面的方法")
+        }
+      }
+// 设置导航栏的样式
+        const navbarStyleOptions = {
+          style: { backgroundColor: '#fff' },
+          rightButtonStyle: { color: '#1fc8a2' },
+          titleStyle: { color: '#000'},
+          marginBottom:20,
+        };
